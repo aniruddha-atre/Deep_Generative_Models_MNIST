@@ -1,6 +1,8 @@
 # 📘 Deep Generative Models From Scratch — DCGAN + DCVAE on MNIST
 
+
 A PyTorch implementation of DCGAN and Deep Convolutional VAE, explores generative modelling, training curves and stability, latent space analysis and visualization techniques.
+
 
 ## 🚀 Models
 
@@ -10,41 +12,30 @@ A PyTorch implementation of DCGAN and Deep Convolutional VAE, explores generativ
 <img width="1051" height="480" alt="image" src="https://github.com/user-attachments/assets/9c3e0c8a-aa00-4227-88bb-18ccf1d33323" />
 
 
-a) Generator (G)
+### a) Generator (G)
 
 Purpose: Transform random Gaussian noise into realistic MNIST digits. The generator learns “how to draw digits” by fooling the discriminator
 
 Input: 100-dimensional noise vector
 
-Upsampling using ConvTranspose2D
+Output: 1×28×28 image (MNIST digit)
 
-BatchNorm for training stability
+We use ConvTranspose2D for Upsampling, BatchNorm for training stability and tanh activation function
 
-Final output is 1×28×28 image (MNIST)
-
-Activation: tanh
-
-b) Discriminator (D)
+### b) Discriminator (D)
 
 Purpose: Classify images as real or fake. The discriminator learns “what digits look like” by detecting artifacts in generator outputs.
 
-Input: MNIST or generated image
-
-Downsampling CNN
-
-LeakyReLU activation
-
-No BatchNorm in the first layer
+Input: Generated MNIST image
 
 Output: Real/Fake score (BCEWithLogits)
 
-c) Adversarial Training Loop
+We use CNN for Downsampling and LeakyReLU activation function
 
-Generator tries to create images that look real.
 
-Discriminator learns to distinguish real vs fake.
+### c) Adversarial Training Loop
 
-The models compete, eventually improving each other.
+The Generator tries to create images that look real and the Discriminator learns to distinguish real vs fake images. The models compete like a min-max game, eventually improving each other.
 
 This adversarial setup produces high-quality sharp samples, but GANs do not learn an interpretable latent space.
 
@@ -55,15 +46,9 @@ This adversarial setup produces high-quality sharp samples, but GANs do not lear
 <img width="1336" height="716" alt="image" src="https://github.com/user-attachments/assets/07da5a92-667a-4ae7-95f3-83e7110fd18d" />
 
 
-A Variational Autoencoder learns:
+A Variational Autoencoder learns how to encode an image into a smooth latent space and how to decode a latent vector back into an image. It models the data distribution using probabilistic encoding.
 
-How to encode an image into a smooth latent space,
-
-How to decode a latent vector back into an image.
-
-It models the data distribution using probabilistic encoding.
-
-a) Encoder
+### a) Encoder
 
 Three convolutional layers
 
@@ -77,7 +62,7 @@ Reparameterization Trick: To enable backpropagation through random sampling:
 
 z = μ + σ * ε,   ε ~ N(0, I)
 
-b) Decoder
+### b) Decoder
 
 Linear layer expanding latent vector
 
@@ -87,7 +72,7 @@ Output: 1×28×28 MNIST-style reconstruction
 
 Activation: Sigmoid (since MNIST is grayscale 0–1)
 
-c) Loss Function = Reconstruction + KL Divergence
+### c) Loss Function = Reconstruction + KL Divergence
 
 The VAE optimizes:
 
@@ -99,7 +84,7 @@ KL forces the latent space to follow a Gaussian distribution
 
 β controls disentanglement (we use β = 0.1)
 
-d) Interpretability Advantage
+### d) Interpretability Advantage
 
 Unlike GANs, VAEs produce:
 
@@ -151,11 +136,11 @@ KL term stabilizes → latent distribution approaches N(0, 1)
 <img width="2250" height="750" alt="dcvae_latent_hist" src="https://github.com/user-attachments/assets/c75b706c-f43c-43f6-b6df-1d09728d357b" />
 
 
-Latent traversals showing interpretable dimensions
-
-Histograms of learned latents approximate a standard Gaussian, which confirms KL regularization is working (Skewed or collapsed distributions would indicate training issues)
-
-t-SNE showing digit clustering indicates that the encoder organizes latent space semantically (Digits with similar structure overlap (e.g., 3 & 5))
+  Latent traversals showing interpretable dimensions
+  
+  Histograms of learned latents approximate a standard Gaussian, which confirms KL regularization is working (Skewed or collapsed distributions would indicate training issues)
+  
+  t-SNE showing digit clustering indicates that the encoder organizes latent space semantically (Digits with similar structure overlap (e.g., 3 & 5))
 
 
 ## 📦 Installation
