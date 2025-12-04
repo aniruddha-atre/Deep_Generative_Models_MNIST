@@ -9,7 +9,7 @@ A PyTorch implementation of DCGAN and Deep Convolutional VAE, explores generativ
 ## 🔷 DCGAN (Deep Convolutional Generative Adversarial Network)
 
 
-<img width="1051" height="480" alt="image" src="https://github.com/user-attachments/assets/9c3e0c8a-aa00-4227-88bb-18ccf1d33323" />
+<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/9c3e0c8a-aa00-4227-88bb-18ccf1d33323" />
 
 
 ### a) Generator (G)
@@ -43,7 +43,7 @@ This adversarial setup produces high-quality sharp samples, but GANs do not lear
 ## 🔶 DCVAE (Deep Convolutional Variational Autoencoder)
 
 
-<img width="1336" height="716" alt="image" src="https://github.com/user-attachments/assets/07da5a92-667a-4ae7-95f3-83e7110fd18d" />
+<img width="750" height="750" alt="image" src="https://github.com/user-attachments/assets/07da5a92-667a-4ae7-95f3-83e7110fd18d" />
 
 
 A Variational Autoencoder learns how to encode an image into a smooth latent space and how to decode a latent vector back into an image. It models the data distribution using probabilistic encoding.
@@ -97,12 +97,19 @@ Meaningful structure in latent dimensions
 Cluster separation (visible in t-SNE plots)
 
 
+## DCGAN Sample vs DCVAE Sample
+
+<img width="450" height="450" alt="dcgan_epoch_25" src="https://github.com/user-attachments/assets/71011901-1c7c-4037-9b74-58e6a14fa172" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="450" height="450" alt="dcvae_epoch_25" src="https://github.com/user-attachments/assets/42cf958a-4db4-4d8b-8791-28b0129639a2" />
+
+
+
+
 ## 📊 Results & Visualizations
 
 
 ## 📈 DCGAN Training Curves
 
-<img width="1050" height="750" alt="dcgan_training_curve" src="https://github.com/user-attachments/assets/32e323ea-e8a8-42d5-ac48-b076cbbf7ca3" />
+<img width="750" height="750" alt="dcgan_training_curve" src="https://github.com/user-attachments/assets/32e323ea-e8a8-42d5-ac48-b076cbbf7ca3" />
 
 
 Shows the Generator and Discriminator losses over epochs.
@@ -116,9 +123,8 @@ Balanced curves indicate healthy adversarial training (no mode collapse)
 
 ## 📈 DCVAE Training Curves
 
-<img width="1050" height="750" alt="dcvae_training_curve" src="https://github.com/user-attachments/assets/2eff9bc0-c94c-4876-96ee-ff75e461449b" />
-
-<img width="1050" height="750" alt="dcvae_bce_kl_train" src="https://github.com/user-attachments/assets/fe921637-7cc8-4a9d-8a51-afebe33eabac" />
+<img width="750" height="750" alt="dcvae_training_curve" src="https://github.com/user-attachments/assets/2eff9bc0-c94c-4876-96ee-ff75e461449b" />
+<img width="750" height="750" alt="dcvae_bce_kl_train" src="https://github.com/user-attachments/assets/fe921637-7cc8-4a9d-8a51-afebe33eabac" />
 
 
 Plots the total VAE loss (BCE + KL) across epochs.
@@ -131,9 +137,7 @@ KL term stabilizes → latent distribution approaches N(0, 1)
 
 ## 🔍 DCVAE Latent Space
 
-<img width="1050" height="750" alt="dcvae_latent_tsne" src="https://github.com/user-attachments/assets/80015bd7-e7ac-4dbb-ad89-f694915f62dd" />
-
-<img width="2250" height="750" alt="dcvae_latent_hist" src="https://github.com/user-attachments/assets/c75b706c-f43c-43f6-b6df-1d09728d357b" />
+<img width="750" height="750" alt="dcvae_latent_tsne" src="https://github.com/user-attachments/assets/80015bd7-e7ac-4dbb-ad89-f694915f62dd" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="1050" height="450" alt="dcvae_latent_hist" src="https://github.com/user-attachments/assets/c75b706c-f43c-43f6-b6df-1d09728d357b" />
 
 
   Latent traversals showing interpretable dimensions
