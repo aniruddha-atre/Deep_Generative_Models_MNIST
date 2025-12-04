@@ -153,10 +153,10 @@ How to Run Training
 
 Train DCGAN:
 
-python -m src.training.train_dcgan
+    python -m src.training.train_dcgan
 
 Train DCVAE:
 
-python -m src.training.train_dcvae
+    python -m src.training.train_dcvae
 
 Plots and samples will be auto-generated.
