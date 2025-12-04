@@ -99,7 +99,7 @@ Cluster separation (visible in t-SNE plots)
 
 ## DCGAN Sample vs DCVAE Sample
 
-<img width="400" height="400" alt="dcgan_epoch_25" src="https://github.com/user-attachments/assets/71011901-1c7c-4037-9b74-58e6a14fa172" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="400" height="400" alt="dcvae_epoch_25" src="https://github.com/user-attachments/assets/42cf958a-4db4-4d8b-8791-28b0129639a2" />
+<img width="400" height="400" alt="dcgan_epoch_25" src="https://github.com/user-attachments/assets/71011901-1c7c-4037-9b74-58e6a14fa172" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="400" height="400" alt="dcvae_epoch_25" src="https://github.com/user-attachments/assets/42cf958a-4db4-4d8b-8791-28b0129639a2" />
 
 
 
