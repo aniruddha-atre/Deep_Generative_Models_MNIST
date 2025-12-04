@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.ipynb
+*.pyo
+*.pyd
+*.pkl
+*.db
+*.sqlite
+
+# Environments
+.venv/
+venv/
+env/
+*.env
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Outputs
+outputs/
+checkpoints/
+logs/
+runs/
+
