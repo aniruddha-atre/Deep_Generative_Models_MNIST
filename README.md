@@ -1,10 +1,14 @@
-📘 Deep Generative Models From Scratch — DCGAN + DCVAE on MNIST
+# 📘 Deep Generative Models From Scratch — DCGAN + DCVAE on MNIST
 
 A PyTorch implementation of DCGAN and Deep Convolutional VAE, explores generative modelling, training curves and stability, latent space analysis and visualization techniques.
 
-🚀 Models
+## 🚀 Models
 
-🔷 DCGAN (Deep Convolutional Generative Adversarial Network)
+## 🔷 DCGAN (Deep Convolutional Generative Adversarial Network)
+
+
+<img width="1051" height="480" alt="image" src="https://github.com/user-attachments/assets/9c3e0c8a-aa00-4227-88bb-18ccf1d33323" />
+
 
 a) Generator (G)
 
@@ -45,7 +49,11 @@ The models compete, eventually improving each other.
 This adversarial setup produces high-quality sharp samples, but GANs do not learn an interpretable latent space.
 
 
-🔶 DCVAE (Deep Convolutional Variational Autoencoder)
+## 🔶 DCVAE (Deep Convolutional Variational Autoencoder)
+
+
+<img width="1336" height="716" alt="image" src="https://github.com/user-attachments/assets/07da5a92-667a-4ae7-95f3-83e7110fd18d" />
+
 
 A Variational Autoencoder learns:
 
@@ -104,10 +112,10 @@ Meaningful structure in latent dimensions
 Cluster separation (visible in t-SNE plots)
 
 
-📊 Results & Visualizations
+## 📊 Results & Visualizations
 
 
-📈 Training Curves (DCGAN)
+## 📈 DCGAN Training Curves
 
 <img width="1050" height="750" alt="dcgan_training_curve" src="https://github.com/user-attachments/assets/32e323ea-e8a8-42d5-ac48-b076cbbf7ca3" />
 
@@ -121,7 +129,7 @@ Generator loss stabilizing → G learns to fool D consistently
 Balanced curves indicate healthy adversarial training (no mode collapse)
 
 
-📈 Training Curves (DCVAE)
+## 📈 DCVAE Training Curves
 
 <img width="1050" height="750" alt="dcvae_training_curve" src="https://github.com/user-attachments/assets/2eff9bc0-c94c-4876-96ee-ff75e461449b" />
 
@@ -136,7 +144,7 @@ BCE reduces → reconstructions improve
 
 KL term stabilizes → latent distribution approaches N(0, 1)
 
-🔍 Latent Space (DCVAE)
+## 🔍 DCVAE Latent Space
 
 <img width="1050" height="750" alt="dcvae_latent_tsne" src="https://github.com/user-attachments/assets/80015bd7-e7ac-4dbb-ad89-f694915f62dd" />
 
@@ -150,7 +158,7 @@ Histograms of learned latents approximate a standard Gaussian, which confirms KL
 t-SNE showing digit clustering indicates that the encoder organizes latent space semantically (Digits with similar structure overlap (e.g., 3 & 5))
 
 
-📦 Installation
+## 📦 Installation
 
 git clone https://github.com/aniruddha-atre/Deep_Generative_Models_MNIST.git
 
